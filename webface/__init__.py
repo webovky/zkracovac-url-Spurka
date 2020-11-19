@@ -1,14 +1,11 @@
 import flask
-from flask_pony import Pony
 from pony.orm import set_sql_debug
 
 # from flask_misaka import Misaka
 
 app = flask.Flask(__name__)
 # misaka = Misaka(app)
-pony = Pony(app)
 
-app.config["PONY"] = {"provider": "sqlite", "dbname": "shortener.sqlite"}
 
 app.secret_key = b"totoj e zceLa n@@@hodny retezec nejlep os.urandom(24)"
 app.secret_key = (
@@ -21,4 +18,3 @@ if app.env == "development":
 from . import routes
 from . import models
 
-pony.connect()

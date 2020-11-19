@@ -2,12 +2,13 @@
 
 {% block obsah %}
 
-<h2>Login</h2>
+<h2>New Account</h2>
 
 <form method="post">
-<p><input type="text"     name="jmeno" placeholder="login"/> </p> 
-<p><input type="password" name="heslo" placeholder="heslo" /> </p>
-<p> <input type="submit" value="Odeslat přihlašovací údaje" /> </p>
+<p><input type="text"     name="login" placeholder="login"/> </p> 
+<p><input type="password" name="passwd1" placeholder="zadej heslo" /> </p>
+<p><input type="password" name="passwd2" placeholder="zadej heslo pro overeni" /> </p>
+<p> <input type="submit" value="vytvorit ucet" /> </p>
 </form>
 
 {% endblock obsah %}
